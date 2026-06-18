@@ -5,8 +5,11 @@
 // 🧠 Basic Idea:
 
 // 👉 Inner function + access to outer variables = Closure
-
+// diffrenece between var and let and const is that var is function scoped and let and const are block scoped.
 // both let and const are block scoped but var is not 
+
+//that is why we can access var outside the block but we cannot access let and const outside the block.
+// also var can be re-declared and updated but let and const cannot be re-declared but let can be updated but const cannot be updated.
 
 // var c = 300
 // let a = 300
@@ -55,23 +58,23 @@
 
 // 👉 "Hoisting is JavaScript's default behavior of moving variable and function declarations to the top."
 
-// console.log(c)
+// console.log(c) // undefined
 
 // var c = 100;  
 
-// console.log(a)
+// console.log(a) // ReferenceError: Cannot access 'a' before initialization
 // let a = 100
 
-// console.log(b)
+// console.log(b) // ReferenceError: Cannot access 'b' before initialization
 // const b = 200
 
-// console.log(addTwoNumber(2,3))
+// console.log(addTwoNumber(2,3)) // function declaration are hoisted
 
 // function addTwoNumber(num1,num2){
 //     return num1+num2
 // }
 
-// console.log(addNumber(3))
+// console.log(addNumber(3)) // function expression are not hoisted ,only the variable declaration is hoisted but not the function expression
 
 // const addNumber = function(num){
 //     return num +1
